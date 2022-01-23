@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 
@@ -29,6 +30,9 @@ public class Recipe {
 	private String source;
 	private String url;
 	private String direcitons;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy ="recipe")
+	private Set<Ingredient> ingredients;
 	
 	@Lob
 	private Byte[] image;
@@ -116,6 +120,12 @@ public class Recipe {
 	}
 	public void setCategories(Set<Category> categories) {
 		this.categories = categories;
+	}
+	public Set<Ingredient> getIngredients() {
+		return ingredients;
+	}
+	public void setIngredients(Set<Ingredient> ingredients) {
+		this.ingredients = ingredients;
 	}
 	
 	
