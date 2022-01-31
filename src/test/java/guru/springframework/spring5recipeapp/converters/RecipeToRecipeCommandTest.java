@@ -60,7 +60,7 @@ class RecipeToRecipeCommandTest {
 		recipe.setPrepTime(PREP_TIME);
 		recipe.setDescription(DESCRIPTION);
 		recipe.setDifficulty(DIFFICULTY);
-		recipe.setDirecitons(DIRECTIONS);
+		recipe.setDirections(DIRECTIONS);
 		recipe.setServings(SERVINGS);
 		recipe.setSource(SOURCE);
 		recipe.setUrl(URL);

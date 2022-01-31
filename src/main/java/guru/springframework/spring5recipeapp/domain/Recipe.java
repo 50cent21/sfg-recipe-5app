@@ -36,7 +36,7 @@ public class Recipe {
 	private String url;
 	
 	@Lob
-	private String direcitons;
+	private String directions;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy ="recipe")
 	private Set<Ingredient> ingredients = new HashSet<>();
